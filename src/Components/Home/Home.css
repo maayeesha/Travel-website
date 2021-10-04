@@ -1,0 +1,39 @@
+.main-body {
+  background-color: #659dbd;
+  padding: 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+.main-body img {
+  border-radius: 30%;
+}
+.banner,
+.description {
+  background-color: #fbeec1;
+  border-radius: 15px;
+  padding: 50px;
+  margin-top: 10px;
+  color: #8d8741;
+  font-weight: bolder;
+}
+.banner h1 {
+  color: blueviolet;
+  animation-name: inherit;
+  font-weight: bolder;
+}
+.banner h1:hover {
+  color: limegreen;
+  font-size: 60px;
+}
+.accordion-head {
+  color: purple;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.website-name {
+  display: block;
+  padding-right: 300px;
+  padding-bottom: 0px;
+}

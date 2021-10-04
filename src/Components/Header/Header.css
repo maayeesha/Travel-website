@@ -1,0 +1,9 @@
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: auto;
+  background-color: #8d8741;
+  font-size: x-large;
+  color: white;
+}
