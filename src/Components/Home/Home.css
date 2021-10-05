@@ -1,39 +1,41 @@
+/* main body style */
+
 .main-body {
-  background-color: #659dbd;
+  background-color: #f5e6cc;
   padding: 20px;
   color: white;
-  font-weight: bolder;
 }
+/* website banner style */
 
-.main-body img {
-  border-radius: 30%;
-}
-.banner,
-.description {
-  background-color: #fbeec1;
+.banner {
+  background-color: #ffb48f;
   border-radius: 15px;
   padding: 50px;
   margin-top: 10px;
-  color: #8d8741;
-  font-weight: bolder;
+  color: black;
+  animation: 5s fadeIn;
 }
 .banner h1 {
   color: blueviolet;
-  animation-name: inherit;
-  font-weight: bolder;
 }
-.banner h1:hover {
-  color: limegreen;
-  font-size: 60px;
+.banner p:hover {
+  color: chocolate;
+  font-size: 30px;
 }
-.accordion-head {
-  color: purple;
-  font-size: 25px;
-  font-weight: bold;
+.banner img {
+  border-radius: 30%;
 }
 
-.website-name {
-  display: block;
-  padding-right: 300px;
-  padding-bottom: 0px;
+/* service section animation */
+.services {
+  animation: 5s fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

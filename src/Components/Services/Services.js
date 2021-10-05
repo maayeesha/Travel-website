@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 const Services = () => {
@@ -19,10 +19,9 @@ const Services = () => {
 
   return (
     <div style={{ backgroundColor: "#DAAD86" }}>
-      <h1 style={{ color: "purple", fontWeight: "bolder" }}>Our Services</h1>
-      <Carousel>
+      <Carousel className="w-75 p-5 mx-auto">
         {services.map((service) => (
-          <Carousel.Item key={service.id} interval={1000}>
+          <Carousel.Item key={service.id} interval={2500}>
             <img
               className="d-block w-75 img-fluid mx-auto"
               src={service.img}
@@ -31,6 +30,16 @@ const Services = () => {
             <Carousel.Caption style={carousCaption}>
               <h3>{service.name}</h3>
               <p>{service.description}</p>
+              <div className="d-flex justify-content-evenly">
+                <span
+                  className="border rounded-3 p-2 fw-bold"
+                  style={{ color: "pink", backgroundColor: "purple" }}
+                >
+                  Fees: ${service.price}
+                </span>
+
+                <Button className="bg-dark"> Purchase </Button>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
         ))}

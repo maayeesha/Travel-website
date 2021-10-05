@@ -1,39 +1,39 @@
 import React from "react";
-import { Container, Form, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAddressCard,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { ListGroup } from "react-bootstrap";
 
+//contact Information
 const ContactUs = () => {
-  const bodyStyle = {
-    backgroundColor: "#FBEEC1",
-    padding: "20px",
-  };
+  const style = { backgroundColor: "#8f00fd", color: "white" };
   return (
-    <div style={bodyStyle}>
-      <div
-        className="card text-dark p-5 m-5"
-        style={{ backgroundColor: "lightblue" }}
-      >
-        <div className="card-header fw-bold bg-primary fs-2">
-          Our Home Office
-        </div>
-        <div className="card-body text-success fw-bold fs-4">
-          <p className="card-text">20/A, Green Road, Dhaka</p>
-          <p>Contact No: 017xxxxxx</p>
-        </div>
+    <div className="d-flex justify-content-evenly py-5 m-0 bg-dark fw-bold">
+      <div style={style} className="p-5">
+        <ListGroup variant="flush">
+          <ListGroup.Item style={style}>
+            <FontAwesomeIcon size="2x" icon={faPhone} />
+            <span>+9901293274</span>
+          </ListGroup.Item>
+          <ListGroup.Item style={style}>
+            {" "}
+            <FontAwesomeIcon size="2x" icon={faAddressCard} />
+            <span className="m-2">
+              54, Brooklyn Sq., Sillicon Valley, San Fransisco, California, USA
+            </span>
+          </ListGroup.Item>
+          <ListGroup.Item style={style}>
+            <FontAwesomeIcon size="2x" icon={faEnvelope} />
+            <span className="m-2">artsyacademy90@academyartsy.com</span>
+          </ListGroup.Item>
+        </ListGroup>
       </div>
-
-      <div
-        className="card text-dark p-5 m-5"
-        style={{ backgroundColor: "lightblue" }}
-      >
-        <div className="card-header fw-bold bg-primary fs-2">
-          Our International Office
-        </div>
-        <div className="card-body text-success fw-bold fs-4">
-          <p className="card-text">
-            52, Greenwich sq, Scarborough, Toronto, Canada
-          </p>
-          <p>Contact No: 01347xxxxxx</p>
-        </div>
+      <div>
+        <Image src="https://images.unsplash.com/photo-1531796311868-83672cd144f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0JTIwc2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
       </div>
     </div>
   );
