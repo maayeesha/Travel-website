@@ -1,8 +1,10 @@
 .nav-bar {
-  padding: 12px;
-  background-image: linear-gradient(#7a4988, #8a7091);
-  font-size: x-large;
+  padding-top: 5px;
+  background-image: linear-gradient(#0f3d75,#1b4d89);
+  font-size: medium;
   color: white;
+  font-weight: bolder;
+  height: auto;
 }
 
 /* Logo image style */

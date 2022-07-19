@@ -1,104 +1,94 @@
 import React from "react";
 import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
 import "./Home.css";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCoffee,
   faSmile,
   faVideo,
-  faSchool,
+  faHotel,
 } from "@fortawesome/free-solid-svg-icons";
-
+import './Images/Dhaka.jpg';
 const Home = () => {
-  const [services, setServices] = useState([]);
-
-  //Fetching JSON data
-  useEffect(() => {
-    fetch("./services.JSON")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
-
-  const slicedServices = services.slice(0, 4);
-  // console.log(services);
-
+  const style ={
+    color: 'navy',
+    width: "18rem"
+  }
   return (
     <div className="main-body fw-bolder">
-      <Container className="banner">
+      <Container className="banner mx-5">
         <Row>
           <Col>
             <Image
-              src="https://data.whicdn.com/images/337884287/original.jpg"
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
               fluid
             />
           </Col>
           <Col>
-            <h1>Artsy Academy</h1>
+            <h1>Roam</h1>
             <h3>
-              <i>Creative learning made easy!</i>
+              <i>Travelling made easy!</i>
             </h3>
             <br />
-            <p style={{ transition: " width infinite" }}>
-              Artsy Academy is a creative learning platform that offers courses
-              on Drawing, Painting,Graphics Design,Digital Arts etc.This is
-              country's first ever platform to offer online and offline classes
-              on arts.
+            <p>
+              Roam is a travelling company that allows users to gain first-class travelling experience.Let's plan your next tour with Roam!
             </p>
           </Col>
         </Row>
       </Container>
-
-      <div className="services">
-        <h1 className="pt-5 fs-1 fw-bolder" style={{ color: "#A64AC9" }}>
-          Our Services
-        </h1>
-
-        <div className="d-flex pt-2 p-5">
-          {slicedServices.map((service) => (
-            <Card
-              className="p-3 m-2"
-              style={{ width: "30%", backgroundColor: "#ffc0cb" }}
-            >
-              <Card.Img variant="top" src={service.img} />
-              <Card.Body>
-                <Card.Title className="fw-bold text-dark">
-                  {service.name}
-                </Card.Title>
-                <Card.Text style={{ color: "purple" }}>
-                  {service.description}
-                </Card.Text>
-                <h2 className="fw-bold text-dark">Fees: ${service.price}</h2>
-                <Button variant="warning">
-                  <Link
-                    className="text-white fw-bold"
-                    to="/services"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Learn more
-                  </Link>
-                </Button>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <hr></hr>
+      <h1>Explore Local Places</h1>
+    <div className="d-flex justify-content-around py-5">
+    <Card style={style}>
+      <Card.Img variant="top" src="https://images.unsplash.com/photo-1599655094604-124d6d7d4af7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" />
+      <Card.Body>
+        <Card.Title className="fw-bold"> Dhaka</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+      </Card.Body>
+    </Card>
+    <Card style={style}>
+      <Card.Img variant="top" src="https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" />
+      <Card.Body>
+        <Card.Title className="fw-bold"> Bandarban</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+      </Card.Body>
+    </Card>
+    <Card style={style}>
+      <Card.Img variant="top" src="https://images.unsplash.com/photo-1631934957959-c7bd45b7ca8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" />
+      <Card.Body>
+        <Card.Title className="fw-bold">Cox's Bazar</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+      </Card.Body>
+    </Card>
+    </div>
+  
       <div
-        className="d-flex justify-content-evenly p-5 my-0"
-        style={{ backgroundColor: "#8f00fd", color: "white" }}
+        className="d-flex justify-content-around py-5"
+        style={{ backgroundColor: "#4a7c78", color: "white",width: "100%"}}
       >
         <div>
           <FontAwesomeIcon size="6x" icon={faSmile} />
-          <h5 className="p-2">10000+ Happy Students</h5>
+          <h5 className="p-2">10000+ Happy Travellers</h5>
         </div>
         <div>
           <FontAwesomeIcon size="6x" icon={faVideo} />
-          <h5 className="p-2">700+ Tutorials</h5>
+          <h5 className="p-2">100+ Features</h5>
         </div>
         <div>
-          <FontAwesomeIcon size="6x" icon={faSchool} />
-          <h5 className="p-2">200+ Offline Classes</h5>
+          <FontAwesomeIcon size="6x" icon={faHotel} />
+          <h5 className="p-2">2000+ hotel bookings</h5>
         </div>
       </div>
     </div>

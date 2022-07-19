@@ -2,11 +2,11 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
-import Services from "./Components/Services/Services";
 import ContactUs from "./Components/Contact Us/ContactUs";
 import About from "./Components/About/About";
 import NotFound from "./Components/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
+import Login from "./Components/Login/Login";
 
 function App() {
   return (
@@ -17,11 +17,11 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/services">
-            <Services></Services>
-          </Route>
           <Route path="/about">
             <About></About>
+          </Route>
+          <Route path="/login">
+           <Login></Login>
           </Route>
           <Route path="/contact">
             <ContactUs></ContactUs>

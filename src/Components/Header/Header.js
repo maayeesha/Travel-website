@@ -1,15 +1,22 @@
 import React from "react";
-import { Image } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Logo from './logo/logo.png';
 import "./Header.css";
+
+/*<div className="">
+<NavLink to="/home">
+<img width="100%"
+   height="100%" src={Logo} alt="logo" />
+ </NavLink>
+</div> */
 
 const Header = () => {
   const activeStyle = {
     fontWeight: "bold",
-    color: "#ffb48f",
-    backgroundColor: "#9300FF",
-    border: "1px solid purple",
-    borderRadius: "30%",
+    color: "#ffffff",
+    backgroundColor: "#6db784",
+    borderRadius: "8%",
   };
   const style = {
     color: "white",
@@ -17,26 +24,28 @@ const Header = () => {
     textDecoration: "none",
   };
   return (
-    <div>
-      <div>
-        <h1 className="pt-3 p-0 m-0 fs-1 fw-bold"> Artsy Academy </h1>
-        <Image src="https://i.ibb.co/mq9tc0G/logo.png" className="logo" />
-      </div>
-      <div className="nav-bar">
-        <NavLink style={style} activeStyle={activeStyle} to="/home">
+    <div className="d-flex justify-content-around nav-bar py-3">
+       <div>
+       <NavLink style={style} activeStyle={activeStyle} to="/home">
           Home
         </NavLink>
-        <NavLink style={style} activeStyle={activeStyle} to="/about">
-          About
+        <NavLink style={style} activeStyle={activeStyle} to="/destinations">
+          Destinations
         </NavLink>
-        <NavLink style={style} activeStyle={activeStyle} to="/services">
-          Our Services
+        <NavLink style={style} activeStyle={activeStyle} to="/tours">
+          Tours
+        </NavLink>
+        <NavLink style={style} activeStyle={activeStyle} to="/about">
+          About Roam
         </NavLink>
         <NavLink style={style} activeStyle={activeStyle} to="/contact">
           Contact Us
         </NavLink>
+        <NavLink style={style} activeStyle={activeStyle} to="/login">
+          Book a tour!
+        </NavLink>
+       </div>
       </div>
-    </div>
   );
 };
 

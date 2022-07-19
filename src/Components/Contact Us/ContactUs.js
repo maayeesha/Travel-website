@@ -28,12 +28,12 @@ const ContactUs = () => {
           </ListGroup.Item>
           <ListGroup.Item style={style}>
             <FontAwesomeIcon size="2x" icon={faEnvelope} />
-            <span className="m-2">artsyacademy90@academyartsy.com</span>
+            <span className="m-2">roam@travel.com</span>
           </ListGroup.Item>
         </ListGroup>
       </div>
       <div>
-        <Image src="https://images.unsplash.com/photo-1531796311868-83672cd144f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0JTIwc2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+        <Image src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" />
       </div>
     </div>
   );
