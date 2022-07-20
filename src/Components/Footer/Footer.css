@@ -1,5 +1,6 @@
 .footer {
-  background-color: #ffb480;
+  background-image: linear-gradient(to right ,#effa5a,#FFE162);
   color: black;
+  height: 20px;
   font-weight: bold;
 }

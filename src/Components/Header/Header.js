@@ -15,7 +15,7 @@ const Header = () => {
   const activeStyle = {
     fontWeight: "bold",
     color: "#ffffff",
-    backgroundColor: "#6db784",
+    backgroundColor: "#14C38E",
     borderRadius: "8%",
   };
   const style = {

@@ -14,11 +14,30 @@
   color: black;
   animation: 5s fadeIn;
 }
-.banner h1 {
-  color: navy;
-  font-weight: 900;
+
+.site_title{
+  color: #22577A;
+  font-size: 80px;
+  font-weight: bolder;
+  padding-left: 120px;
+
+
 }
 
 .banner img {
-  border-radius: 30%;
+  border-radius: 10%;
+  
 }
+
+.moto{
+  padding-left: 110px;
+  color : #6d6a5e;
+
+}
+
+.site_des{
+  text-align: center;
+  padding-left: 80px;
+  color : #77ACF1;
+}
+

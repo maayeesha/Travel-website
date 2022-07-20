@@ -11,8 +11,8 @@ import {
 import './Images/Dhaka.jpg';
 const Home = () => {
   const style ={
-    color: 'navy',
-    width: "18rem"
+    color: '#001D6E',
+    width: "22rem"
   }
   return (
     <div className="main-body fw-bolder">
@@ -25,12 +25,12 @@ const Home = () => {
             />
           </Col>
           <Col>
-            <h1>Roam</h1>
+            <h1 className="site_title">Roam</h1>
             <h3>
-              <i>Travelling made easy!</i>
+              <i className="moto">Travelling made easy!</i>
             </h3>
             <br />
-            <p>
+            <p className="site_des">
               Roam is a travelling company that allows users to gain first-class travelling experience.Let's plan your next tour with Roam!
             </p>
           </Col>
@@ -58,7 +58,7 @@ const Home = () => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+        <Button variant="success" text="bold" className="fw-bold cl">Visit this place</Button>
       </Card.Body>
     </Card>
     <Card style={style}>
@@ -76,7 +76,7 @@ const Home = () => {
   
       <div
         className="d-flex justify-content-around py-5"
-        style={{ backgroundColor: "#4a7c78", color: "white",width: "100%"}}
+        style={{ backgroundColor: "#132C33", color: "white",width: "100%"}}
       >
         <div>
           <FontAwesomeIcon size="6x" icon={faSmile} />

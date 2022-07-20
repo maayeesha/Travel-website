@@ -10,9 +10,10 @@ import { ListGroup } from "react-bootstrap";
 
 //contact Information
 const ContactUs = () => {
-  const style = { backgroundColor: "#8f00fd", color: "white" };
+  
+  const style = { backgroundColor: "#005555" , color: "white" };
   return (
-    <div className="d-flex justify-content-evenly py-5 m-0 bg-dark fw-bold">
+    <div className="d-flex justify-content-evenly py-5 m-0 bg-light fw-bold">
       <div style={style} className="p-5">
         <ListGroup variant="flush">
           <ListGroup.Item style={style}>
@@ -33,7 +34,7 @@ const ContactUs = () => {
         </ListGroup>
       </div>
       <div>
-        <Image src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" />
+        <Image src="https://previews.123rf.com/images/tupungato/tupungato1301/tupungato130100436/17654356-postcard-collage-from-rome-italy-all-photos-taken-by-me-and-available-also-separately-.jpg" height={500} width = {650} />
       </div>
     </div>
   );
