@@ -11,7 +11,7 @@ import { ListGroup } from "react-bootstrap";
 //contact Information
 const ContactUs = () => {
   
-  const style = { backgroundColor: "#005555" , color: "white" };
+  const style = {  backgroundColor: "#005555" , color: "white" };
   return (
     <div className="d-flex justify-content-evenly py-5 m-0 bg-light fw-bold">
       <div style={style} className="p-5">
