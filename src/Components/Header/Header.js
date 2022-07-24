@@ -1,15 +1,7 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import Logo from './logo/logo.png';
 import "./Header.css";
-
-/*<div className="">
-<NavLink to="/home">
-<img width="100%"
-   height="100%" src={Logo} alt="logo" />
- </NavLink>
-</div> */
 
 const Header = () => {
   const activeStyle = {

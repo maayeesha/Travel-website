@@ -1,103 +1,93 @@
-import React from "react";
+import React, { useState,useEffect } from 'react';
+import fire from '../../Firebase';
+import SignIn from '../SignIn/SignIn';
+
+//https://thumbs.dreamstime.com/b/sunset-tropical-beach-palm-trees-sea-summer-resort-background-vector-illustration-sunset-tropical-beach-palm-217475782.jpg
 const Login = () => {
-  const style = {
-    backgroundImage:
-      "url('https://thumbs.dreamstime.com/b/sunset-tropical-beach-palm-trees-sea-summer-resort-background-vector-illustration-sunset-tropical-beach-palm-217475782.jpg') ",
-    color: 'black',
+  const [user,setUser] = useState('');
+  const[email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+  const [emailError,setEmailError] = ('');
+  const [passwordError,setPasswordError] = useState('');
+  const [hasAccount, setHasAccount] = useState(false);
+
+  const clearInputs = () =>{
+    setEmail('');
+    setPassword('');
+  }
+  const clearErrors = () =>
+  {
+    setEmailError('');
+    setPasswordError('');
+  }
+  const handleLogin = () =>
+  {
+    clearErrors();
+    fire
+    .auth()
+    .signInWithEmailAndPassword(email,password)
+    .catch(err => {
+      switch(err.code){
+        case "auth/invalid-email":
+        case "auth/user-disabled":
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+      }
+    });
   };
 
-  const st = {color : 'black', fontWeight: 'bolder', fontSize : 'largest'}
-  const stt = {color : 'white', fontWeight: 'bolder', fontSize : 'largest', backgroundColor: "#000000"}
-  const pp = {background: 'transparent' }
+  const handleSignUp = () =>
+  {
+    clearErrors();
+    fire
+    .auth()
+    .createUserWithEmailAndPassword(email,password)
+    .catch(err => {
+      switch(err.code){
+        case "auth/email-already-in-use":
+        case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+      }
+    });
 
+  };
+  const handleLogOut = () =>
+  {
+    fire.auth().signOut();
+  };
 
+  const authListener = () =>
+  {
+    fire.auth().onAuthStateChanged(user =>{
+      if(user) {
+        clearInputs();
+        setUser(user);
+      }
+      else {
+        setUser('');
+      }
+    });
+  };
+
+  useEffect(() =>{
+      authListener();
+  },[])
   return (
-    <div style={style}>
-      <from className="frm">
-        <br></br>
-        <lebel for="name" style = {st}> Name : </lebel>
-        <br></br>
-        <input
-          type="text"
-          id="name"
-          class="name"
-          style = {pp}
-          size="55"
-          placeholder="  Enter Your Name"
-        />
-
-        <br />
-        <lebel for="name" style = {st}>
-          {" "}
-          Email :{" "}
-        </lebel>
-        <br></br>
-        <input
-          type="email"
-          id="name"
-          className="name"
-          size="55"
-          placeholder="  Enter E-mail address"
-        />
-        <br />
-        <lebel for="name" style = {st}>
-          {" "}
-          Password :{" "}
-        </lebel>
-        <br></br>
-        <input
-          type="password"
-          id="name"
-          className="name"
-          size="55"
-          placeholder="  Enter Your Password"
-        />
-        <br />
-        <br></br>
-        <br></br>
-
-        <lebel style = {st}>Destination</lebel>
-        <br />
-        <select id="Course" style={stt}>
-          <option>--Select One--</option>
-          <option>Cox's Bazar</option>
-          <option>Gaur</option>
-          <option>Inani Beach</option>
-          <option>Jaflong</option>
-          <option>Kuakata Sea Beach</option>
-          <option>Mainamati</option>
-          <option>Paharpur</option>
-          <option>Rangamati</option>
-          <option>Sajek Valley</option>
-          <option>Sundarbans</option>
-        </select>
-        <br />
-        <br></br>
-        <br></br>
-
-        <label style = {st}>Transport</label>
-        <br></br>
-        <input type="radio" id="rad" name="sos" class="rad" value="male" />
-        <label for="rad" style = {st}>
-          Bus
-        </label>
-        <span>🚌 </span>
-        <input type="radio" id="rad" name="sos" class="rad" value="female" />
-        <label for="rad" style = {st}>
-          Train
-        </label>
-        <span>🚄 </span>
-        <input type="radio" id="rad" name="sos" class="rad" value="female" />
-        <label for="rad" style = {st}>
-          Plane
-        </label>
-        <span>✈️ </span>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-      </from>
+    <div>
+      <SignIn email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin} 
+      handleSignUp={handleSignUp}
+      hasAccount={hasAccount}
+      setHasAccount={setHasAccount}
+      emailError = {emailError}
+      passwordError={passwordError}></SignIn>
     </div>
   );
 };

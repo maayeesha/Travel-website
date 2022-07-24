@@ -6,7 +6,7 @@ import ContactUs from "./Components/Contact Us/ContactUs";
 import About from "./Components/About/About";
 import NotFound from "./Components/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
-import Login from "./Components/Login/Login";
+import SignIn from "./Components/SignIn/SignIn";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <About></About>
           </Route>
           <Route path="/login">
-           <Login></Login>
+           <SignIn></SignIn>
           </Route>
           <Route path="/contact">
             <ContactUs></ContactUs>
