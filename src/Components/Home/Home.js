@@ -44,10 +44,9 @@ const Home = () => {
       <Card.Body>
         <Card.Title className="fw-bold"> Dhaka</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        Dhaka is the capital city of Bangladesh.Set beside the Buriganga River, it’s at the center of national government,trade and culture. The 17th-century city was the Mughal capital of Bengal.
         </Card.Text>
-        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+        <Button variant="success" text="bold" className="fw-bold" href="/login">Visit this place</Button>
       </Card.Body>
     </Card>
     <Card style={style}>
@@ -55,10 +54,9 @@ const Home = () => {
       <Card.Body>
         <Card.Title className="fw-bold"> Bandarban</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        Bandarban (Bengali: বান্দরবান) is a district in South-Eastern Bangladesh, and a part of the Chittagong Division.[4] It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts
         </Card.Text>
-        <Button variant="success" text="bold" className="fw-bold cl">Visit this place</Button>
+        <Button variant="success" text="bold" className="fw-bold cl" href="/login">Visit this place</Button>
       </Card.Body>
     </Card>
     <Card style={style}>
@@ -66,54 +64,41 @@ const Home = () => {
       <Card.Body>
         <Card.Title className="fw-bold">Cox's Bazar</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south
         </Card.Text>
-        <Button variant="success" text="bold" className="fw-bold">Visit this place</Button>
+        <Button variant="success" text="bold" className="fw-bold" href="/login">Visit this place</Button>
       </Card.Body>
     </Card>
     </div>
     <h1>Frequently Asked Questions</h1>
     <Container className="d-flex p-5">
         <div>
-         <Image src={question} fluid/>
+         <Image src={question} width="560px"/>
         </div>
       <div>
-      <Accordion defaultActiveKey={['0']} Open>
+      <Accordion style={{width: "600px"}} defaultActiveKey={['0']} Open>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Does "Roam" arranges tours?</Accordion.Header>
+        <Accordion.Header >
+          <h5 className="fw-bold">Does "Roam" arrange tours?</h5>
+        </Accordion.Header>
         <Accordion.Body >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+         Roam arranges tour every month for people around the globe. Our faith in diversity makes us stand out in the world of tourism.For booking a tour, all you need to do is, get yourself sign up prior to your departure time. We suggest you to book a tour at least two months in advance.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
-        <Accordion.Header>Do you have offline booking system?</Accordion.Header>
+        <Accordion.Header>
+        <h5 className="fw-bold"> Do you have offline booking system? </h5>
+        </Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Roam has offices located in different parts of Bangladesh. Our head office is in San Francisco,California, USA. You can head to <span href="/contact"> Contact page</span> for more details.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
-        <Accordion.Header>How far in advance should I book a tour?</Accordion.Header>
+        <Accordion.Header>
+        <h5 className="fw-bold"> How far in advance should I book a tour? </h5> 
+        </Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Booking a tour is not hard and you can do it online. However, due to the massive demand and restrictions considered after COVID-19, the visa process may take a long time depending on your destination. That's why, it is suggested that you book the tour at least 2 months ahead.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
