@@ -1,7 +1,6 @@
 import React from "react";
-import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Image, Row,Accordion } from "react-bootstrap";
 import "./Home.css";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSmile,
@@ -9,6 +8,7 @@ import {
   faHotel,
 } from "@fortawesome/free-solid-svg-icons";
 import './Images/Dhaka.jpg';
+import question from "./Images/question.jpg"
 const Home = () => {
   const style ={
     color: '#001D6E',
@@ -73,7 +73,52 @@ const Home = () => {
       </Card.Body>
     </Card>
     </div>
-  
+    <h1>Frequently Asked Questions</h1>
+    <Container className="d-flex p-5">
+        <div>
+         <Image src={question} fluid/>
+        </div>
+      <div>
+      <Accordion defaultActiveKey={['0']} Open>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Does "Roam" arranges tours?</Accordion.Header>
+        <Accordion.Body >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Do you have offline booking system?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>How far in advance should I book a tour?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+      </div>
+      </Container>
       <div
         className="d-flex justify-content-around py-5"
         style={{ backgroundColor: "#132C33", color: "white",width: "100%"}}

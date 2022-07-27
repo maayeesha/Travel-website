@@ -7,6 +7,8 @@ import About from "./Components/About/About";
 import NotFound from "./Components/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
 import SignIn from "./Components/SignIn/SignIn";
+import Destinations from "./Components/Destinations/Destinations";
+import Tours from "./Components/Tours/Tours";
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/destinations">
+            <Destinations></Destinations>
+          </Route>
+          <Route path="/tours">
+            <Tours></Tours>
           </Route>
           <Route path="/about">
             <About></About>
