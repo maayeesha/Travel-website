@@ -13,36 +13,34 @@ import Tours from "./Components/Tours/Tours";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/destinations">
-            <Destinations></Destinations>
-          </Route>
-          <Route path="/tours">
-            <Tours></Tours>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/login">
-           <SignIn></SignIn>
-          </Route>
-          <Route path="/contact">
-            <ContactUs></ContactUs>
-          </Route>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <Header></Header>
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/destinations">
+          <Destinations></Destinations>
+        </Route>
+        <Route path="/tours">
+          <Tours></Tours>
+        </Route>
+        <Route path="/about">
+          <About></About>
+        </Route>
+        <Route path="/login">
+          <SignIn />
+        </Route>
+        <Route path="/contact">
+          <ContactUs></ContactUs>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+      <Footer></Footer>
     </div>
   );
 }

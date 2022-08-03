@@ -1,9 +1,10 @@
 import React from "react";
-
+import { Image } from "react-bootstrap";
+import notfound from "./404.png";
 const NotFound = () => {
   return (
     <div>
-      <h1>The page will be updated soon</h1>
+      <Image src={notfound}></Image>
     </div>
   );
 };
