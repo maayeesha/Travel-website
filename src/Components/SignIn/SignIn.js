@@ -6,7 +6,9 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
   const handleLogin = () => {};
-  const handleSignUp = () => {};
+  const handleSignUp = () => {
+    setEmail(handleSignUp.target.value);
+  };
   /*const {
     handleLogin,
     handleSignUp,
@@ -25,9 +27,15 @@ const SignIn = () => {
         <Button onClick={handleLogin} variant="warning fw-bold" type="submit">
           Book a tour
         </Button>
+        <br></br>
         <p>
           Don't have an account?{" "}
-          <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span>
+          <Button
+            onClick={() => setHasAccount(!hasAccount)}
+            variant="warning fw-bold"
+          >
+            Sign Up
+          </Button>
         </p>
       </>
     );
@@ -37,9 +45,15 @@ const SignIn = () => {
         <Button onClick={handleSignUp} variant="warning fw-bold" type="submit">
           Sign Up
         </Button>
+        <br></br>
         <p>
           Have an account?{" "}
-          <span onClick={() => setHasAccount(!hasAccount)}>Book a tour!</span>
+          <Button
+            onClick={() => setHasAccount(!hasAccount)}
+            variant="warning fw-bold"
+          >
+            Book a tour!
+          </Button>
         </p>
       </>
     );
