@@ -17,8 +17,8 @@ const Header = () => {
   };
   return (
     <div className="d-flex justify-content-around nav-bar py-3">
-       <Navbar>
-       <NavLink style={style} activeStyle={activeStyle} to="/home">
+      <Navbar>
+        <NavLink style={style} activeStyle={activeStyle} to="/home">
           Home
         </NavLink>
         <NavLink style={style} activeStyle={activeStyle} to="/destinations">
@@ -33,11 +33,11 @@ const Header = () => {
         <NavLink style={style} activeStyle={activeStyle} to="/contact">
           Contact Us
         </NavLink>
-        <NavLink style={style} activeStyle={activeStyle} to="/login">
+        <NavLink style={style} activeStyle={activeStyle} to="/signup">
           Book a tour!
         </NavLink>
-       </Navbar>
-      </div>
+      </Navbar>
+    </div>
   );
 };
 
