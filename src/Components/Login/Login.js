@@ -34,7 +34,7 @@ export default function Login() {
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label className="text-md-left">Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <Form.Control type="" ref={emailRef} required />
             </Form.Group>
 
             <Form.Group id="password">
@@ -42,7 +42,11 @@ export default function Login() {
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
 
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button
+              disabled={loading}
+              className="w-100 my-4 fw-bold"
+              type="submit"
+            >
               Book a tour
             </Button>
           </Form>
@@ -50,10 +54,10 @@ export default function Login() {
             <Link to="/forgot-password"> Forgot Password? </Link>
           </div>
         </Card.Body>
+        <div className="w-100 text-center mt-2 my-3">
+          Need an account? <Link to="/signup">Sign Up </Link>
+        </div>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up </Link>
-      </div>
     </>
   );
 }

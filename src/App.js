@@ -40,18 +40,28 @@ function App() {
           <About></About>
         </Route>
         <Route path="/signup">
-          <Container className="fw-bold d-flex align-items-center justify-content-center">
+          <div
+            className="fw-bold d-flex align-items-center justify-content-center"
+            style={{
+              backgroundImage: `url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=383&q=80")`,
+            }}
+          >
             <div className="w-100" style={{ maxWidth: "400px" }}>
               <Signup />
             </div>
-          </Container>
+          </div>
         </Route>
         <Route path="/login">
-          <Container className="fw-bold d-flex align-items-center justify-content-center">
-            <div className="w-100" style={{ maxWidth: "400px" }}>
+          <div
+            className="fw-bold d-flex align-items-center justify-content-center"
+            style={{
+              backgroundImage: `url("https://images.unsplash.com/photo-1582996091947-7c50ca745bc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80")`,
+            }}
+          >
+            <div className="w-100 my-5" style={{ maxWidth: "400px" }}>
               <Login />
             </div>
-          </Container>
+          </div>
         </Route>
 
         <Route path="/contact">

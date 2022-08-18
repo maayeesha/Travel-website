@@ -12,7 +12,7 @@ export default function Bookings() {
     setError("");
     try {
       await logout();
-      history.push("/login");
+      history.push("/");
     } catch {
       setError("Failed to Log Out");
     }
@@ -22,7 +22,7 @@ export default function Bookings() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">My Bookings</h2>
+          <h2 className="text-center mb-4 fw-bold">My Bookings</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email:</strong> {currentUser.email}
           <Link to="/update-bookings" className="btn btn-primary w-100 mt-3">
