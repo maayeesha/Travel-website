@@ -36,6 +36,9 @@ const Header = () => {
         <NavLink style={style} activeStyle={activeStyle} to="/signup">
           Book a tour!
         </NavLink>
+        <NavLink style={style} activeStyle={activeStyle} to="/bookings">
+          Your Bookings
+        </NavLink>
       </Navbar>
     </div>
   );
