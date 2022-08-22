@@ -1,7 +1,9 @@
 import React from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import { getFirestore } from "firebase/firestore";
 
+// initializing firebase
 const app = firebase.initializeApp({
   apiKey: "AIzaSyA9QDIz-lbU6ijaPgDGtNZzcWmXIJsvDls",
   authDomain: "travel-website-7953b.firebaseapp.com",
