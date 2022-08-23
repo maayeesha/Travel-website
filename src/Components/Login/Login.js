@@ -34,12 +34,22 @@ export default function Login() {
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label className="text-md-left">Email</Form.Label>
-              <Form.Control type="" ref={emailRef} required />
+              <Form.Control
+                className="fw-bold"
+                type=""
+                ref={emailRef}
+                required
+              />
             </Form.Group>
 
             <Form.Group id="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Control
+                className="fw-bold"
+                type="password"
+                ref={passwordRef}
+                required
+              />
             </Form.Group>
 
             <Button
@@ -53,10 +63,10 @@ export default function Login() {
           <div className="w-100 text-center mt-3">
             <Link to="/forgot-password"> Forgot Password? </Link>
           </div>
+          <div className="w-100 text-center mt-2 my-3">
+            Need an account? <Link to="/signup">Sign Up </Link>
+          </div>
         </Card.Body>
-        <div className="w-100 text-center mt-2 my-3">
-          Need an account? <Link to="/signup">Sign Up </Link>
-        </div>
       </Card>
     </>
   );

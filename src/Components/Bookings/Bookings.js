@@ -2,7 +2,6 @@ import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Button, Card, Alert, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
-import db from "../../Firebase/firebase";
 import { useAuth } from "../Contexts/AuthContext";
 import Login from "../Login/Login";
 
@@ -15,8 +14,8 @@ export default function Bookings() {
   async function handleLogout() {
     setError("");
     try {
+      history.push("/home");
       await logout();
-      history.push("/");
     } catch {
       setError("Failed to Log Out");
     }

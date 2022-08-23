@@ -9,7 +9,6 @@ import Footer from "./Components/Footer/Footer";
 import Destinations from "./Components/Destinations/Destinations";
 import Tours from "./Components/Tours/Tours";
 import Signup from "./Components/Signup/Signup";
-import { Container } from "react-bootstrap";
 import Login from "./Components/Login/Login";
 import Bookings from "./Components/Bookings/Bookings";
 import PrivateRoute from "./Components/PrivaterRoute/PrivateRoute";

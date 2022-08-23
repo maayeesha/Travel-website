@@ -40,23 +40,43 @@ export default function Signup() {
 
           <Form.Group id="password">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" ref={nameRef} required />
+            <Form.Control
+              className="fw-bold"
+              type="text"
+              ref={nameRef}
+              required
+            />
           </Form.Group>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label className="text-md-left">Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <Form.Control
+                className="fw-bold"
+                type="email"
+                ref={emailRef}
+                required
+              />
             </Form.Group>
 
             <Form.Group id="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Control
+                className="fw-bold"
+                type="password"
+                ref={passwordRef}
+                required
+              />
             </Form.Group>
 
             <Form.Group id="password-confirm">
               <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control type="password" ref={passwordConfirmRef} required />
+              <Form.Control
+                className="fw-bold"
+                type="password"
+                ref={passwordConfirmRef}
+                required
+              />
             </Form.Group>
             <Button
               disabled={loading}

@@ -1,9 +1,12 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useAuth } from "../Contexts/AuthContext";
 import "./Header.css";
 
 const Header = () => {
+  const { currentUser, logout } = useAuth();
+
   const activeStyle = {
     fontWeight: "bold",
     color: "#ffffff",
@@ -33,12 +36,27 @@ const Header = () => {
         <NavLink style={style} activeStyle={activeStyle} to="/contact">
           Contact Us
         </NavLink>
-        <NavLink style={style} activeStyle={activeStyle} to="/signup">
-          Book a tour!
-        </NavLink>
-        <NavLink style={style} activeStyle={activeStyle} to="/bookings">
-          Your Bookings
-        </NavLink>
+        {!currentUser ? (
+          <NavLink style={style} activeStyle={activeStyle} to="/signup">
+            Book a tour!
+          </NavLink>
+        ) : (
+          <span>
+            {" "}
+            <Link
+              to="/bookings"
+              style={{
+                textDecoration: "none",
+                color: "navy",
+                backgroundColor: "#ADD8E6",
+                borderRadius: "6%",
+                padding: "8px",
+              }}
+            >
+              {currentUser?.email}
+            </Link>
+          </span>
+        )}
       </Navbar>
     </div>
   );

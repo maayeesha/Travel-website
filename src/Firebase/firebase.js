@@ -1,16 +1,14 @@
-import React from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import { getFirestore } from "firebase/firestore";
 
 // initializing firebase
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyA9QDIz-lbU6ijaPgDGtNZzcWmXIJsvDls",
-  authDomain: "travel-website-7953b.firebaseapp.com",
-  projectId: "travel-website-7953b",
-  storageBucket: "travel-website-7953b.appspot.com",
-  messagingSenderId: "896686864767",
-  appId: "1:896686864767:web:02920c896b11ca9abdc24a",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
 
 export const auth = app.auth();
