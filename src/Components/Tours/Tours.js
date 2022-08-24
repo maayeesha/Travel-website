@@ -29,7 +29,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Hiking in hong Kong</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Hiking in hong Kong
+            </h4>
             ​​The Dragons Back walk starts in the small village of Pengenffordd
             within the Brecon Beacons National Park. It boasts fantastic views
             of the surrounding country side and the beautiful Black
@@ -51,7 +61,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Museum Tour in London</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Museum Tour
+            </h4>
             ​​Discover ancient civilisations, learn from the incredible
             achievements and challenges of people and societies past and
             present, and immerse yourself in the culture, languages,
@@ -74,7 +94,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Solo Tours for Women</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Solo Tours for Women
+            </h4>
             Many women take their first solo trip with our group; therefore we
             expect to spend time on the phone to work through any worries you
             might have. If you wish to book or ask questions about a Women's
@@ -95,7 +125,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Diving deep</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Diving deep
+            </h4>
             Underwater diving, as a human activity, is the practice of
             descending below the water's surface to interact with the
             environment. It is also often referred to as diving, an ambiguous
@@ -118,7 +158,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Camping in Bandarban</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Camping in Bandarban
+            </h4>
             Camping is an outdoor activity that involves staying the night/more
             than one night in a protective shelter out in nature. Camping is a
             broad term but in its essence, camping is a way of getting away from
@@ -140,7 +190,17 @@ const Tours = () => {
         </Col>
         <Col>
           <p className="pt-4 fw-bold text-wrap">
-            <h4>Exotic Sky diving</h4>
+            <h4
+              className="fw-bold p-2"
+              style={{
+                color: "white",
+                backgroundColor: "#2c3e4c",
+                border: "2px solid",
+                borderRadius: "10px",
+              }}
+            >
+              Exotic Sky diving
+            </h4>
             Skydiving, is a method of transiting from a high point in the
             atmosphere to the surface of Earth with the aid of gravity,
             involving the control of speed during the descent using a parachute
