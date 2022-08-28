@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel, Card, Button } from "react-bootstrap";
 import rome from "./Images/rome.avif";
 import london from "./Images/london.avif";
@@ -9,8 +9,11 @@ import bali from "./Images/bali.avif";
 import india from "./Images/india.avif";
 import switzerland from "./Images/switzerland.avif";
 import japan from "./Images/japan.avif";
+import { useAuth } from "../Contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 const Destinations = () => {
+  const { currentUser, logout } = useAuth();
   const fontStyle = {
     fontSize: "25px",
     fontWeight: "bold",
@@ -88,9 +91,16 @@ const Destinations = () => {
               sovereign country comprising the mainland of the Australian
               continent, the island of Tasmania, and numerous smaller islands.
             </Card.Text>
-            <Button variant="success" className="fw-bold" href="/login">
-              Book a tour
-            </Button>
+
+            {!currentUser ? (
+              <Button variant="success" className="fw-bold" href="/login">
+                Book a tour
+              </Button>
+            ) : (
+              <Button variant="success" className="fw-bold" href="/bookings">
+                Book a tour
+              </Button>
+            )}
           </Card.Body>
         </Card>
         <Card style={cardStyle}>
@@ -108,9 +118,15 @@ const Destinations = () => {
               Japan, while extending from the Sea of Okhotsk in the north toward
               the East China Sea, Philippine Sea, and Taiwan in the south.
             </Card.Text>
-            <Button variant="success" className="fw-bold" href="/login">
-              Book a tour
-            </Button>
+            {!currentUser ? (
+              <Button variant="success" className="fw-bold" href="/login">
+                Book a tour
+              </Button>
+            ) : (
+              <Button variant="success" className="fw-bold" href="/bookings">
+                Book a tour
+              </Button>
+            )}
           </Card.Body>
         </Card>
         <Card style={cardStyle}>
@@ -128,9 +144,15 @@ const Destinations = () => {
               cities contain medieval quarters, with landmarks like capital
               Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge.
             </Card.Text>
-            <Button variant="success" className="fw-bold" href="/login">
-              Book a tour
-            </Button>
+            {!currentUser ? (
+              <Button variant="success" className="fw-bold" href="/login">
+                Book a tour
+              </Button>
+            ) : (
+              <Button variant="success" className="fw-bold" href="/bookings">
+                Book a tour
+              </Button>
+            )}
           </Card.Body>
         </Card>
       </div>

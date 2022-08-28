@@ -6,8 +6,12 @@ import skydive from "./Images/skydive.avif";
 import women from "./Images/women.avif";
 import museum from "./Images/museum.avif";
 import camp from "./Images/camp.avif";
+import { useAuth } from "../Contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 const Tours = () => {
+  const { currentUser, logout } = useAuth();
+
   const cardStyle = {
     width: "18rem",
     fontWeight: "bolder",
@@ -46,9 +50,15 @@ const Tours = () => {
             Mountains.Hiking is a long, vigorous walk, usually on trails or
             footpaths in the countryside.
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            Go Hiking
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              Go Hiking
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              Go Hiking
+            </Button>
+          )}
         </Col>
 
         <Col>
@@ -77,9 +87,15 @@ const Tours = () => {
             present, and immerse yourself in the culture, languages,
             environments, people and debates of our ever-changing world.
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            Visit Museum
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              Visit Museum{" "}
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              Visit Museum
+            </Button>
+          )}
         </Col>
       </Row>
 
@@ -110,9 +126,15 @@ const Tours = () => {
             might have. If you wish to book or ask questions about a Women's
             Travel Group tour or talk about travel generally,click below.
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            For women tourists
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              For Women tourists{" "}
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              For Women tourists
+            </Button>
+          )}
         </Col>
 
         <Col>
@@ -141,9 +163,15 @@ const Tours = () => {
             environment. It is also often referred to as diving, an ambiguous
             term with several possible meanings, depending on context.
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            Go Sea diving
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              Go Sea Diving
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              Go Sea Diving
+            </Button>
+          )}
         </Col>
       </Row>
 
@@ -175,9 +203,15 @@ const Tours = () => {
             the hassle of urban life, to a more natural environment for a
             limited time
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            Book Camping
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              Book Camping
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              Book Camping
+            </Button>
+          )}
         </Col>
 
         <Col>
@@ -206,9 +240,15 @@ const Tours = () => {
             involving the control of speed during the descent using a parachute
             or parachutes
           </p>
-          <Button className="fw-bold" href="/login" variant="warning">
-            Go Sky diving
-          </Button>
+          {!currentUser ? (
+            <Button className="fw-bold" href="/login" variant="warning">
+              Go Sky Diving
+            </Button>
+          ) : (
+            <Button className="fw-bold" href="/bookings" variant="warning">
+              Go Sky Diving
+            </Button>
+          )}
         </Col>
       </Row>
     </Container>
